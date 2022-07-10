@@ -37,3 +37,14 @@ POSTMAN 使用：
    ]
 }' | jq -r
 ```
+
+GET
+``` postman
+curl -s --location --request GET 'http://localhost:8080/recipes' \
+--header 'Content-Type: application/json
+```
+
+``` postman
+curl -s -X GET 'http://localhost:8080/recipes' | jq length
+```
+
