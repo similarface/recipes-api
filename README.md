@@ -48,3 +48,18 @@ curl -s --location --request GET 'http://localhost:8080/recipes' \
 curl -s -X GET 'http://localhost:8080/recipes' | jq length
 ```
 
+
+
+
+
+# 安装reids
+
+go get github.com/go-redis/redis
+
+
+# ab 测试
+```bash
+ab -n 2000 -c 100 -g with-cache.data http://localhost:8080/recipes
+
+ab -n 2000 -c 100 -g without-cache.data http://localhost:8080/recipes
+```
